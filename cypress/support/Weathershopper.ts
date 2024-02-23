@@ -42,4 +42,43 @@ export class Weathershopper {
                 }
             });
     }
+
+    public static assertLeastExpensiveSunscreensWithSPF50(){
+        cy.get(Base.productCard.allProducts)
+            .each(($product) => {
+                const title = $product.find(Base.productCard.name).text();
+                const price = parseFloat($product.find(Base.productCard.price).text().replace('Price: Rs. ', ''));
+
+                if (title.includes('SPF-50') && price < minPrice) {
+                    minPrice = price;
+                    minPriceProduct = $product;
+                }
+            })
+            .then(() => {
+                if (minPriceProduct) {
+                    minPriceProduct.find(Base.productCard.addButton).click();
+                } else {
+                    throw new Error('No product containing Aloe found');
+                }
+            });
+    }
+    public static assertLeastExpensiveSunscreensWithSPF30(){
+        cy.get(Base.productCard.allProducts)
+            .each(($product) => {
+                const title = $product.find(Base.productCard.name).text();
+                const price = parseFloat($product.find(Base.productCard.price).text().replace('Price: Rs. ', ''));
+
+                if (title.includes('SPF-30') && price < minPrice) {
+                    minPrice = price;
+                    minPriceProduct = $product;
+                }
+            })
+            .then(() => {
+                if (minPriceProduct) {
+                    minPriceProduct.find(Base.productCard.addButton).click();
+                } else {
+                    throw new Error('No product containing Almond found');
+                }
+            });
+    }
 }
