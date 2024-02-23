@@ -1,6 +1,6 @@
 import {Fixtures} from "../fixtures";
 
-describe('Shop for moisturizers if the weather is below 19 degrees', () => {
+describe('Shop for sunscreens if the weather is below 19 degrees', () => {
 
     beforeEach(()=> {
         Fixtures.open('')
@@ -10,7 +10,8 @@ describe('Shop for moisturizers if the weather is below 19 degrees', () => {
 
     })
 
-  it('should add two moisturizers to your cart', () => {
+  it('should add two sunscreens to your cart', () => {
       Fixtures.checkTemperature()
+
     });
   })

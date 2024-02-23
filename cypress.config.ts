@@ -7,7 +7,7 @@ dotenv.config();
 
 export default defineConfig({
   chromeWebSecurity: false,
-  requestTimeout: 60000,
+  requestTimeout: 20000,
   defaultCommandTimeout: 20000,
   projectId: 'c4uh3c',
   viewportWidth: 1280,
