@@ -2,7 +2,7 @@ import {Fixtures} from "../fixtures";
 import {Weathershopper} from "../support/Weathershopper";
 import {Base} from "../objects/Base";
 
-describe('Shop for sunscreens if the weather is below 19 degrees', () => {
+describe('Shop for sunscreens if the weather is above 34 degrees', () => {
 
     beforeEach(()=> {
         Fixtures.open('')
