@@ -24,7 +24,7 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           working-directory: Weathershopper
-          start: yarn cypress run --config-file cypress.config.ts --env baseUrl=$E2E_BASE_URL --env testUser=$TEST_USER --env testPassword=$TEST_PASSWORD --browser ${{ matrix.browser }}
+          start: npm ci && npm run cypress run --config-file cypress.config.ts --env baseUrl=$E2E_BASE_URL --env testUser=$TEST_USER --env testPassword=$TEST_PASSWORD --browser ${{ matrix.browser }}
           record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
