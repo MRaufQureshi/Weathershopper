@@ -7,26 +7,28 @@ import {Base} from "../objects/Base";
 export class Fixtures {
 
   public static checkTemperature():void{
-    let temp;
-    try {
-      /* If temperature is less than 19, navigate to "Moisturizer" page */
-      temp = cy.get(Base.landingPage.temperature)
+    let temperatureText: string;
 
-      if (temp < 19) {
-        cy.get(Base.landingPage.moisturizerButton).click()
-      }
+    cy.get(Base.landingPage.temperature).invoke('text').then((text) => {
+      temperatureText = text;
+      let temperature = parseFloat(temperatureText.split(' ')[0]);
+      cy.log(text)
 
-      /* If temperature is greater than 34, navigate to "Sunscreen" page */
-      else if (temp > 34) {
-        cy.get(Base.landingPage.sunscreenButton).click()
+      try {
+        /* If temperature is less than 19, navigate to "Moisturizer" page */
+
+        if (temperature < 19) {
+          cy.get(Base.landingPage.moisturizerButton).click()
+        }
+
+        /* If temperature is greater than 34, navigate to "Sunscreen" page */
+        else if (temperature > 34) {
+          cy.get(Base.landingPage.sunscreenButton).click()
+        }
+      } catch (error) {
+        console.error(error);
       }
-      // Do nothing if temperature is ok
-      else {
-        console.log('Temperature is ok!!');
-      }
-    } catch (error) {
-      console.error(error);
-    }
+    })
   }
 
   public static open(path){
