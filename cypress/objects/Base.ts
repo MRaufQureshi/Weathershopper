@@ -5,10 +5,10 @@ export const Base= {
         sunscreenButton: '[href="/sunscreen"]'
     },
     productCard: {
-        allProducts: ".text-center.col-4",
-        name: ".text-center.col-4 .font-weight-bold",
-        price: ".text-center.col-4 > p:nth-child(3)",
-        addButton: '.btn',
+        allProducts: '.text-center.col-4',
+        name: ".font-weight-bold",
+        price: "> p:nth-child(3)",
+        addButton: '.btn.btn-primary',
         cartButton: '#cart'
     },
     cart: {
