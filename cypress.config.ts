@@ -9,7 +9,7 @@ export default defineConfig({
   chromeWebSecurity: false,
   requestTimeout: 20000,
   defaultCommandTimeout: 20000,
-  projectId: 'c4uh3c',
+  projectId: 'm61ya8',
   viewportWidth: 1280,
   viewportHeight: 800,
   numTestsKeptInMemory: 10,
