@@ -22,7 +22,7 @@ export default defineConfig({
           return null
         }
       })
-      return //require('./cypress/plugins/index.js')(on, config)
+      return
     },
 
     baseUrl: process.env.E2E_BASE_URL,
