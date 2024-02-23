@@ -11,6 +11,6 @@ describe('Shop for moisturizers if the weather is below 19 degrees', () => {
     })
 
   it('should add two moisturizers to your cart', () => {
-
+      Fixtures.checkTemperature()
     });
   })
