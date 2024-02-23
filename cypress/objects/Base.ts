@@ -14,7 +14,7 @@ export const Base= {
     cart: {
         base: '.table',
         payButton: '.stripe-button-el',
-        stripeIframe: '//iframe'
+        stripeIframe: 'iframe'
     },
     payment: {
         email: '#email',
