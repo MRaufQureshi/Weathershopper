@@ -18,5 +18,4 @@ describe('Shop for moisturizers if the weather is below 19 degrees', () => {
         cy.get(Base.productCard.cartButton).click()
         cy.reload()
     });
-
 })
