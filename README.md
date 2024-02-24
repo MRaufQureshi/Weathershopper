@@ -22,7 +22,7 @@ After cloning the repo, In the command line, install the package dependencies us
 Cypress
 
 # Local Setup
-UnZip this file locally and open it in IDE
+UnZip this file locally and/or clone the repo & open it in IDE
 
 # Running E2E tests locally
 
