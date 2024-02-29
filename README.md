@@ -1,15 +1,12 @@
 # Weathershopper
 
-# Beyonnex.iO Task
-
 🔔 Hi there,
-
 
 <img width="600" alt="XXX" src="https://www.monkeyuser.com/2022/unit-tests/248-unit-tests.png" class="center">
 
 ### Introduction
 
-Test cases are written using Cypress Framework with Typescript and CICD actions over Circle CI with Docker and Github actions.
+Test cases are written using Cypress Framework with Typescript and CICD actions over Circle CI with Docker and Github actions for Weathershopper website which has test task defined in the tooltip.
 
 ---
 
@@ -35,7 +32,7 @@ yml file has been added and github actions are running successfully
 # Circle CI with Docker (iOS and Android included)
 
 yml file has been added but Circle CI actions are *not* running successfully because I have ran out of free credits to test it properly.
-
+You may set your own Circle CI actions accordingly using yml file in this repo.
 
 
 ***Side note for understanding***
